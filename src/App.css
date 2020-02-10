@@ -31,3 +31,19 @@
     transform: rotate(360deg);
   }
 }
+
+.astroContainer h1{
+  background: #170847;
+  color: #fff;
+  padding: 10px;
+}
+
+.astroContainer img{
+  width: 650px;
+  height: 650px;
+}
+
+.astroContainer p{
+  width: 60%;
+  margin-left: 20%;
+}

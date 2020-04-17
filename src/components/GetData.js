@@ -1,6 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import AstroContainer from './AstroContainer'
+import AstroContainer from './AstroContainer';
+import styled from 'styled-components';
+
+
+const Apod = styled.div`
+margin: 0 auto;
+  width: 80%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: groove;
+`;
 
 
 const GetData = () => {
@@ -10,17 +22,17 @@ useEffect(() => {
   axios
       .get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
       .then(response => {
-      
+        console.log(response.data)
           setData(response.data);
       })
       .catch(error => {
           console.log("Error!!", error)
       });
 }, []);
+console.log('data',data)
 
-console.log(data)
 
-  return <div className= "astro">
+  return <Apod>
     <AstroContainer 
     key={data.id}
     hdurl={data.hdurl}
@@ -29,7 +41,7 @@ console.log(data)
     explanation={data.explanation}
     />
     
-    </div>
+    </Apod>
 
 
 }

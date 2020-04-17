@@ -1,3 +1,8 @@
+body {
+  margin: 0 auto;
+}
+
+
 .App {
   text-align: center;
 }
@@ -9,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #a0d6f5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,18 +37,34 @@
   }
 }
 
+.astroContainer{
+  margin: 0 auto;
+  width: 80%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: groove;
+
+
+}
+
 .astroContainer h1{
-  background: #170847;
-  color: #fff;
+  border-radius: 20px;
+  color: rgba(49, 72, 92, 0.925);
   padding: 10px;
+  font-family: Cinzel, serif;
 }
 
 .astroContainer img{
   width: 650px;
   height: 650px;
+  padding: 10px;
 }
 
 .astroContainer p{
-  width: 60%;
-  margin-left: 20%;
+  font-family: Cinzel, serif;
+  width: 50%
+  
+  
 }
